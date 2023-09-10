@@ -26,9 +26,14 @@
           [routerLink]="['/posts/post-list']">Listagem de Posts</button>
       </div>
     </div>
-    <div *ngIf="!isViewAvailable">
+    <div *ngIf="!isViewAvailable"
+      class="col-sm-12 col-md-12 col-lg-8 col-xl-8 schools-text d-flex flex-column justify-content-center align-items-center">
       <span class="view-not-available">
         Não foi possível encontrar o Post para a visualização!
+      </span>
+      <p></p>
+      <span class="back-to-post-list">
+        Clique <a href="javascript:void(0)" (click)="navigateToPostDetails()">aqui</a> para visualizar a Listagem de Posts
       </span>
     </div>
   </div>

@@ -18,7 +18,8 @@ export class PostDetailsComponent implements OnInit {
 
   constructor(
     private postsService: PostsService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -34,6 +35,11 @@ export class PostDetailsComponent implements OnInit {
         this.isViewAvailable = false;
         console.log("error: " + error);
       })
+  }
+
+  
+  navigateToPostDetails() {
+    this.router.navigate(['posts/post-list'])
   }
 
 }

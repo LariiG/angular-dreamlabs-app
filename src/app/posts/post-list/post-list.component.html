@@ -1,0 +1,53 @@
+<div class="container-fluid">
+  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 schools-text d-flex flex-column justify-content-center align-items-center">
+    <div class="page-title">
+      <label class="mt-4">Listagem de Posts</label>
+    </div>
+  </div>
+  <form [formGroup]="postForm">
+    <div class="row d-flex justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10">
+        <div class="search-label">
+          <label class="mt-1">Pesquisar</label>
+        </div>
+        <div class="form-group form-inline input-group search-bar-alignment"
+          style="margin-top: 0px;">
+          <input type="text" class="form-control" formControlName="title" 
+            placeholder="Informe o título para a pesquisa">
+          <button type="button" class="input-group-text" title="Pesquisar"
+            (click)="searchTitle()">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Título</th>
+              <th scope="col">Descrição</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let post of posts | paginate: { itemsPerPage: 5, currentPage: p, totalItems: posts.length}" 
+              (click)="viewPost(post.id)"> 
+              <td>{{ post.title }}</td>
+              <td>{{ post.body }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </form>
+  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 schools-text d-flex flex-column justify-content-center align-items-center">
+    <div *ngIf="posts.length > 1">
+      <pagination-controls (pageChange)="p = $event"
+        previousLabel="Anterior"
+        nextLabel="Próximo">
+      </pagination-controls>
+    </div>
+    <div *ngIf="isEmptyField">
+      <span class="post-not-found">
+        Post não encontrado
+      </span>
+    </div>
+  </div>
+</div>

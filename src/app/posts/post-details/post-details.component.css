@@ -1,0 +1,17 @@
+.table-header {
+  color: rgb(61, 61, 61);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.page-title {
+  color: rgb(8, 125, 160);
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.view-not-available {
+  color: rgb(65, 65, 65);
+  font-size: 20px;
+  font-weight: 500;
+}

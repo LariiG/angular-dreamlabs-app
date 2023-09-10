@@ -1,0 +1,55 @@
+.table-header {
+  color: rgb(100, 100, 100);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.search-label {
+  color: rgb(100, 100, 100);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.page-title {
+  color: rgb(8, 125, 160);
+  font-size: 25px;
+  font-weight: 700;
+}
+
+td { 
+  cursor: pointer; 
+  font-size: 14px;
+}
+
+.search-bar-alignment {
+  margin-top: 5%;
+  margin-bottom: 3%;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(143, 142, 142);
+}
+
+.post-not-found {
+  margin-top: 3%;
+  color: rgba(80, 80, 80, 0.993);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+tr {
+  overflow: auto; 
+  width: 100%;
+  display: inline-table;
+  table-layout: fixed;
+}
+
+table  { 
+  border-collapse: collapse; width: 100%; 
+}
+th, td { 
+  padding: 8px 16px; 
+}
+th { 
+  background: #000000;
+  color: rgb(255, 255, 255);
+}
